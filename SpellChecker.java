@@ -68,7 +68,12 @@ public class SpellChecker {
 					minWord = dictionary[i];
 				}
 			}
-			//System.out.println(dictionary[i] + " " + minWord + " " + levenshtein(word, minWord));
+
+			// Check the case where if the input word is a word in the dictionary, then it is correct and we save minWord to that word.
+			if (word.equals(dictionary[i])) {
+				minWord = dictionary[i];
+			}
+			System.out.println(dictionary[i] + " " + minWord + " " + levenshtein(word, minWord));
 		}
 
 		if (levenshtein(word, minWord) > threshold) {
