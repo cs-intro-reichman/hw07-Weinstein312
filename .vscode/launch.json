@@ -45,7 +45,7 @@
             "request": "launch",
             "mainClass": "SpellChecker",
             "projectName": "hw07-Weinstein312_ff9f43b1",
-            "args": ["mario", "2"]
+            "args": ["coooool", "3"]
         },
         {
             "type": "java",

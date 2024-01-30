@@ -64,13 +64,15 @@ public class SpellChecker {
 		String minWord = "";
 		for (var i = 0; i < dictionary.length; i++) {
 			if (levenshtein(word, dictionary[i]) <= levenshtein(word, minWord)) {
-				minWord = dictionary[i];
+				if (levenshtein(word, minWord) > threshold) {
+					minWord = dictionary[i];
+				}
 			}
-			//System.out.println(dictionary[i] + " " + minWord + " " + levenshtein(word, minWord));
+			System.out.println(dictionary[i] + " " + minWord + " " + levenshtein(word, minWord));
 		}
 
 		if (levenshtein(word, minWord) > threshold) {
-			return "";
+			return word;
 		}
 		return minWord;
 	}
