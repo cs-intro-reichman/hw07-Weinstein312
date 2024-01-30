@@ -68,7 +68,7 @@ public class SpellChecker {
 					minWord = dictionary[i];
 				}
 			}
-			System.out.println(dictionary[i] + " " + minWord + " " + levenshtein(word, minWord));
+			//System.out.println(dictionary[i] + " " + minWord + " " + levenshtein(word, minWord));
 		}
 
 		if (levenshtein(word, minWord) > threshold) {
